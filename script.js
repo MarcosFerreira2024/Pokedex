@@ -9,10 +9,6 @@ async function pokemon(pokemon) {
     let response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
     let json = await response.json()
     dados(json,pokemon)
-    trocaFoto(json.id)
-}
-function trocaFoto(pokemon){
-    document.querySelector('[data-foto="fotoPokemon"] img').setAttribute('src',`https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/other/home/${pokemon}.png?raw=true`)
 }
 function dados(json){
     typePokemon.innerHTML=json.types[0].type.name
@@ -100,6 +96,7 @@ function dados(json){
     weightPokemon.innerHTML=`${json.weight/10} kg`
     heightPokemon.innerHTML=`${json.height/10} m`
     abilityPokemon.innerHTML=json.abilities[0].ability.name
+    document.querySelector('[data-foto="fotoPokemon"] img').setAttribute('src',`${json.sprites.other["official-artwork"].front_default}`)
 }
 
 let form = document.querySelector('.containerSearch')
