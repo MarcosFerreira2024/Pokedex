@@ -1,0 +1,219 @@
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+  outline: none;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* começo do css */
+
+.containerGeral{
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: auto;
+}
+
+.containerPokedex{
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    width: 400px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-radius: 15px;
+
+}
+
+.containerPokemon{
+    width: 100%;
+    height: 40%;
+    background-color: #FB923C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+
+}
+
+.gifPokemon{
+    scale: 1.3;
+}
+.botao{
+    cursor: pointer;
+}
+
+.mainDataContainer{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.mainDataLeft{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-left: 20px;
+
+}
+
+.type{
+    background-color: #FB923C;
+    padding: 10px;
+    align-self: flex-start;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 20px;
+    width: 140px;
+    color: white;
+    font-size: 1.2rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.nomePokemon{
+    font-size: 2.5rem;
+    padding-bottom: 10px;
+    color: #636363;
+}
+
+.idPokemon{
+    font-size: 1.2rem;
+    color: #8b8b8b;
+}
+
+.lv{
+    font-size: 0.875rem;
+    color: #8b8b8b ;
+    
+}
+
+.mainDataRight{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-right: 20px;
+    width: 50%;
+    gap: 5px;
+
+}
+.numLv{
+    font-size: 2.425rem;
+    color: #636363;
+}
+
+.secundaryData{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: auto;
+    gap: 60px;
+
+}
+
+.secundaryData h3{
+    color: #8b8b8b;
+    font-size: 1.125rem;
+}
+
+.secundaryData p{
+    color: #636363;
+    font-size: 1.425rem;
+}
+
+.weight{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+.height{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+}   
+.ability{ 
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+
+#search{
+    border-radius: 15px;
+    font-family: "Pixelify Sans";
+    height: 100%;
+    text-align: center;
+}
+
+
+.search {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    margin-left: 10px;
+
+
+}
+
+.containerSearch{
+    position: relative;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    width: 50%;
+    height: 30px;
+    border: 1px solid #ababab;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.poppins{
+    font-family: "Poppins";
+}
+.pixel{
+    font-family:"Pixelify Sans"
+}
+

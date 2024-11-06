@@ -12,37 +12,50 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     </head>
     <body>
         <main class="containerGeral">
-            <section>
+            <section class="containerPokedex">
                 <div class="containerPokemon">
-                    <button class="button"></button>
+                    <a class="botao"><img src="imgs/left-arrow.svg" alt=""></a>
                     <div data-gif="gifPokemon" class="gifPokemon">
-                        <img src="https://play.pokemonshowdown.com/sprites/xyani/charizard.gif" alt="Imagem animada do Charizard">
+                        <img src="https://play.pokemonshowdown.com/sprites/xyani/bulbasaur.gif" alt="imagem Pokemon">
                     </div>
-                    <button class="button"></button>
+                    <a class="botao"><img src="imgs/right-arrow.svg" alt=""></a>
                 </div>
-                <section class="mainData">
-                    <h1 data-name="nomePokemon">Nome Pokemon</h1>
-                    <p data-id="idPokemon">---</p>
-                    <h2 data-lv="lvPokemon">Nível Evolução: <span>---</span></h2>
-                    <a href="#tipo">Tipo</a>
+                <section class="mainDataContainer">
+                    <div class="mainDataLeft pixel">
+                        <h1 data-name="nomePokemon" class="nomePokemon">bulbasaur</h1>
+                        <p data-id="idPokemon" class="idPokemon">001</p>
+                        <a href=""data-type="typePokemon" class="type poppins">----</a>
+                    </div>
+                    <div class="mainDataRight">
+                        <h2 class="lv pixel">nível<br>evolução</h2>
+                        <p data-lv="lvPokemon" class="numLv poppins">1</p>
+                    </div>
                 </section>
-                <section class="secundaryData">
+                <section class="secundaryData pixel">
                     <div class="weight">
-                        <h3>Peso</h3>
-                        <p data-weight="weightPokemon">---</p>
+                        <h3>peso</h3>
+                        <p class="poppins" data-weight="weightPokemon">---</p>
                     </div>
                     <div class="height">
-                        <h3>Altura</h3>
-                        <p data-height="heightPokemon">---</p>
+                        <h3>altura</h3>
+                        <p class="poppins" data-height="heightPokemon">---</p>
                     </div>
                     <div class="ability">
-                        <h3>Habilidade</h3>
-                        <p data-ability="abilityPokemon">---</p>
+                        <h3>habilidade</h3>
+                        <p class="poppins" data-ability="abilityPokemon">---</p>
                     </div>
-                </section>
+                </section>              
+                    <form action="" class="containerSearch" >
+                        <input type="text" name="search" id="search" data-search="searchBar">           
+                        <label for="search" class="search"><img src="/imgs/search.svg" alt=""></label>
+                    </form>  
             </section>
         </main>
         
