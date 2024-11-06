@@ -97,6 +97,17 @@ function dados(json){
     abilityPokemon.innerHTML=json.abilities[0].ability.name
 }
 
+let form = document.querySelector('.containerSearch')
+form.addEventListener('submit',searchBar)
+
+function searchBar(e){
+    e.preventDefault()
+    let search = document.querySelector('[data-search="searchBar"]').value.toLowerCase()
+    if (search.trim()!=""){
+        pokemon(search)
+    }
+}
+
 pokemon(1)
 
 
