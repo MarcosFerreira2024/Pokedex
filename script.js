@@ -12,7 +12,7 @@ async function pokemon(pokemon) {
     trocaFoto(json.id)
 }
 function trocaFoto(pokemon){
-    document.querySelector('[data-foto="fotoPokemon"] img').setAttribute('src',`https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/other/official-artwork/${pokemon}.png?raw=true`)
+    document.querySelector('[data-foto="fotoPokemon"] img').setAttribute('src',`https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/other/home/${pokemon}.png?raw=true`)
 }
 function dados(json){
     typePokemon.innerHTML=json.types[0].type.name
