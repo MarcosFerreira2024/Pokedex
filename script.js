@@ -1,20 +1,22 @@
+let containerPokemon=document.querySelector('.containerPokemon')
+let namePokemon = document.querySelector('[data-name="nomePokemon"]')
+let idPokemon =  document.querySelector('[data-id="idPokemon"]')
+let typePokemon= document.querySelector('[data-type="typePokemon"]')
+let weightPokemon= document.querySelector('[data-weight="weightPokemon"]')
+let heightPokemon= document.querySelector('[data-height="heightPokemon"]')
+let abilityPokemon= document.querySelector('[data-ability="abilityPokemon"]')
 async function pokemon(pokemon) {
     let response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
     let json = await response.json()
     dados(json,pokemon)
+    trocaFoto(json.id)
 }
 function trocaFoto(pokemon){
     document.querySelector('[data-foto="fotoPokemon"] img').setAttribute('src',`https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/other/official-artwork/${pokemon}.png?raw=true`)
 }
 function dados(json){
-    let containerPokemon=document.querySelector('.containerPokemon')
-    let namePokemon = document.querySelector('[data-name="nomePokemon"]')
-    let idPokemon =  document.querySelector('[data-id="idPokemon"]')
-    let typePokemon= document.querySelector('[data-type="typePokemon"]')
-    let weightPokemon= document.querySelector('[data-weight="weightPokemon"]')
-    let heightPokemon= document.querySelector('[data-height="heightPokemon"]')
-    let abilityPokemon= document.querySelector('[data-ability="abilityPokemon"]')
     typePokemon.innerHTML=json.types[0].type.name
+    
     switch (json.types[0].type.name) {
         case "normal":
             typePokemon.style.backgroundColor = "gray";
@@ -108,10 +110,32 @@ function searchBar(e){
     let search = document.querySelector('[data-search="searchBar"]').value.toLowerCase()
     if (search.trim()!=""){
         pokemon(search)
-        trocaFoto(search)
     }
 }
 
+let botaoEsquerdo = document.querySelector('[data-botaoEsquerdo="botao-esquerdo"]')
+let botaoDireito = document.querySelector('[data-botaoDireito="botao-direito"]')
+botaoEsquerdo.addEventListener('click',diminuirId)
+botaoDireito.addEventListener('click',aumentarId)
+
+function aumentarId(){ 
+    let idPokemonNumber= +idPokemon.innerHTML
+    if (idPokemonNumber<=1025){
+    pokemon(idPokemonNumber +1)
+    trocaFoto(idPokemonNumber +1)
+    }else{
+        console.log('nao existe pokemon com id maior que 1025')
+    }
+
+}
+
+function diminuirId(){ 
+    let idPokemonNumber= +idPokemon.innerHTML
+    if (idPokemonNumber >1){
+        pokemon(idPokemonNumber -1)
+        trocaFoto(idPokemonNumber -1)
+    }
+}
 pokemon(1)
 
 
