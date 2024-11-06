@@ -4,62 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <main class="containerGeral">
-            <section class="containerPokedex">
-                <div class="containerPokemon">
-                    <a data-botaoEsquerdo="botao-esquerdo" class="botao"><img src="imgs/left-arrow.svg" alt=""></a>
-                    <div data-foto="fotoPokemon" class="fotoPokemon">
-                        <img src="https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/other/official-artwork/1.png?raw=true" alt="imagem Pokemon">
-                    </div>
-                    <a data-botaoDireito="botao-direito" class="botao"><img src="imgs/right-arrow.svg" alt=""></a>
+    <main class="containerGeral">
+        <section class="containerPokedex">
+            <div class="containerPokemon">
+                <a data-botaoEsquerdo="botao-esquerdo" class="botao"><img src="imgs/left-arrow.svg" alt=""></a>
+                <div data-foto="fotoPokemon" class="fotoPokemon">
+                    <img src="https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/other/official-artwork/1.png?raw=true" alt="imagem Pokemon">
                 </div>
-                <section class="mainDataContainer">
-                    <div class="mainDataLeft pixel">
-                        <h1 data-name="nomePokemon" class="nomePokemon">bulbasaur</h1>
-                        <p data-id="idPokemon" class="idPokemon">001</p>
-                        <a href="" data-type="typePokemon" class="type poppins">----</a>
-                    </div>
-                    <div class="mainDataRight">
-                        <h2 class="lv pixel">nível<br>evolução</h2>
-                        <p data-lv="lvPokemon" class="numLv poppins">-</p>
-                    </div>
-                </section>
-                <section class="secundaryData pixel">
-                    <div class="weight">
-                        <h3>peso</h3>
-                        <p class="poppins" data-weight="weightPokemon">---</p>
-                    </div>
-                    <div class="height">
-                        <h3>altura</h3>
-                        <p class="poppins" data-height="heightPokemon">---</p>
-                    </div>
-                    <div class="ability">
-                        <h3>habilidade</h3>
-                        <p class="poppins abilityPokemon" data-ability="abilityPokemon" >---</p>
-                    </div>
-                </section>              
-                    <form action="" class="containerSearch" >
-                        <input type="text" name="search" id="search" data-search="searchBar" placeholder="Search">           
-                        <label for="search" class="search"><img src="/imgs/search.svg" alt=""></label>
-                    </form>  
+                <a data-botaoDireito="botao-direito" class="botao"><img src="imgs/right-arrow.svg" alt=""></a>
+            </div>
+            <section class="mainDataContainer">
+                <div class="mainDataLeft pixel">
+                    <h1 data-name="nomePokemon" class="nomePokemon">bulbasaur</h1>
+                    <p data-id="idPokemon" class="idPokemon">001</p>
+                    <a href="" data-type="typePokemon" class="type poppins">----</a>
+                </div>
+                <div class="mainDataRight">
+                    <h2 class="lv pixel">nível<br>evolução</h2>
+                    <p data-lv="lvPokemon" class="numLv poppins">-</p>
+                </div>
             </section>
-        </main>
-        
+            <section class="secundaryData pixel">
+                <div class="weight">
+                    <h3>peso</h3>
+                    <p class="poppins" data-weight="weightPokemon">---</p>
+                </div>
+                <div class="height">
+                    <h3>altura</h3>
+                    <p class="poppins" data-height="heightPokemon">---</p>
+                </div>
+                <div class="ability">
+                    <h3>habilidade</h3>
+                    <p class="poppins abilityPokemon" data-ability="abilityPokemon" >---</p>
+                </div>
+            </section>              
+                <form action="" class="containerSearch" >
+                    <input type="text" name="search" id="search" data-search="searchBar" placeholder="Search">           
+                    <label for="search" class="search"><img src="imgs/search.svg" alt=""></label>
+                </form>  
+        </section>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
-    
+
