@@ -1,7 +1,10 @@
 async function pokemon(pokemon) {
     let response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
     let json = await response.json()
-    dados(json)
+    dados(json,pokemon)
+}
+function trocaFoto(pokemon){
+    document.querySelector('[data-foto="fotoPokemon"] img').setAttribute('src',`https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/other/official-artwork/${pokemon}.png?raw=true`)
 }
 function dados(json){
     let containerPokemon=document.querySelector('.containerPokemon')
@@ -105,6 +108,7 @@ function searchBar(e){
     let search = document.querySelector('[data-search="searchBar"]').value.toLowerCase()
     if (search.trim()!=""){
         pokemon(search)
+        trocaFoto(search)
     }
 }
 
