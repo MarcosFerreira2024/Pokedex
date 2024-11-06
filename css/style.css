@@ -140,10 +140,9 @@ table {
 
 .secundaryData{
     display: flex;
-    width: 100%;
-    justify-content: center;
     margin: auto;
-    gap: 60px;
+    width: 360px ;
+    height: 15%;
 
 }
 
@@ -159,21 +158,27 @@ table {
 
 .weight{
     display: flex;
+    width: 100%;
     gap: 10px;
     flex-direction: column;
     align-items: center;
+    
 }
 .height{
     display: flex;
+    width: 100%;
     gap: 10px;
     flex-direction: column;
     align-items: center;
+    
 }   
 .ability{ 
     display: flex;
+    width: 100%;
     gap: 10px;
     flex-direction: column;
     align-items: center;
+    
 
 }
 .abilityPokemon{
