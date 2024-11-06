@@ -122,7 +122,6 @@ function aumentarId(){
     let idPokemonNumber= +idPokemon.innerHTML
     if (idPokemonNumber<=1025){
     pokemon(idPokemonNumber +1)
-    trocaFoto(idPokemonNumber +1)
     }else{
         console.log('nao existe pokemon com id maior que 1025')
     }
@@ -133,7 +132,6 @@ function diminuirId(){
     let idPokemonNumber= +idPokemon.innerHTML
     if (idPokemonNumber >1){
         pokemon(idPokemonNumber -1)
-        trocaFoto(idPokemonNumber -1)
     }
 }
 pokemon(1)
